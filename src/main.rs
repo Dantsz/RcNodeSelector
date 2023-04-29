@@ -1,4 +1,5 @@
 use arrayref::array_ref;
+use clap::Parser;
 use crossbeam::channel::{unbounded, Receiver, SendError};
 use serde::{Deserialize, Serialize};
 use std::mem::size_of;
@@ -6,7 +7,12 @@ use std::net::UdpSocket;
 use std::thread::{self, Thread};
 use std::time::Duration;
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Parser, Debug)]
+struct Args {
+    #[arg(default_value_t = 1111)]
+    port: i64,
+}
+
 enum ThreadAction {
     STARTEDLISTENING,
     STOP,
@@ -43,7 +49,7 @@ fn listener_node_routine(data: ChildNode) -> std::io::Result<()> {
             }
             Err(ref err) if err.kind() == std::io::ErrorKind::TimedOut => {
                 if !data.parent_connection.is_empty() {
-                    break 'listen_loop;
+                    return Ok(());
                 }
             }
             Err(_) => {}
@@ -75,7 +81,7 @@ fn master_node_routine(data: MasterNodeData) -> std::io::Result<()> {
             }
             Err(ref err) if err.kind() == std::io::ErrorKind::TimedOut => {
                 if !data.stop_connection.is_empty() {
-                    break 'listen_loop;
+                    return Ok(());
                 }
             }
             Err(_) => {}
@@ -84,9 +90,10 @@ fn master_node_routine(data: MasterNodeData) -> std::io::Result<()> {
     Ok(())
 }
 fn main() -> Result<(), SendError<ThreadAction>> {
-    const NODE1_ADDRESS: &str = "127.0.0.4:1111";
-    const NODE2_ADDRESS: &str = "127.0.0.2:1111";
-    const NODE3_ADDRESS: &str = "127.0.0.3:1111";
+    let args = Args::parse();
+    let node1_address = format!("127.0.0.4:{}", args.port);
+    let node2_address = format!("127.0.0.2:{}", args.port);
+    let node3_address = format!("127.0.0.3:{}", args.port);
 
     println!("Creating channels");
     let (n1_tx, n1_rx) = unbounded::<ThreadAction>();
@@ -96,12 +103,12 @@ fn main() -> Result<(), SendError<ThreadAction>> {
     println!("Starting listener threads");
     let node2_data = ChildNode {
         divisor_value: 3,
-        ip_adress: NODE2_ADDRESS.to_owned(),
+        ip_adress: node2_address.to_owned(),
         parent_connection: n2_rx,
     };
     let node3_data = ChildNode {
         divisor_value: 5,
-        ip_adress: NODE3_ADDRESS.to_owned(),
+        ip_adress: node3_address.to_owned(),
         parent_connection: n3_rx,
     };
     let node2_handler = thread::spawn(move || listener_node_routine(node2_data));
@@ -109,9 +116,9 @@ fn main() -> Result<(), SendError<ThreadAction>> {
     println!("Starting master node");
     let node1_handler = thread::spawn(move || {
         master_node_routine(MasterNodeData {
-            ip_adress: NODE1_ADDRESS.to_owned(),
+            ip_adress: node1_address.to_owned(),
             stop_connection: n1_rx,
-            listener_nodes: vec![NODE2_ADDRESS.to_owned(), NODE3_ADDRESS.to_owned()],
+            listener_nodes: vec![node2_address.to_owned(), node3_address.to_owned()],
         })
     });
     thread::sleep(Duration::from_secs(5));
