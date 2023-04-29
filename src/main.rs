@@ -104,11 +104,10 @@ fn main() -> Result<(), SendError<ThreadAction>> {
         ip_adress: NODE3_ADDRESS.to_owned(),
         parent_connection: n3_rx,
     };
-    println!("Starting Main Child Nodes");
-    let _node2_handler = thread::spawn(move || listener_node_routine(node2_data));
-    let _node3_handler = thread::spawn(move || listener_node_routine(node3_data));
+    let node2_handler = thread::spawn(move || listener_node_routine(node2_data));
+    let node3_handler = thread::spawn(move || listener_node_routine(node3_data));
     println!("Starting master node");
-    let _master_listener_thread = thread::spawn(move || {
+    let node1_handler = thread::spawn(move || {
         master_node_routine(MasterNodeData {
             ip_adress: NODE1_ADDRESS.to_owned(),
             stop_connection: n1_rx,
@@ -120,6 +119,18 @@ fn main() -> Result<(), SendError<ThreadAction>> {
     n1_tx.send(ThreadAction::STOP)?;
     n2_tx.send(ThreadAction::STOP)?;
     n3_tx.send(ThreadAction::STOP)?;
+    node2_handler
+        .join()
+        .expect("Failed to join with Node 2")
+        .unwrap();
+    node3_handler
+        .join()
+        .expect("Failed to join with Node 3")
+        .unwrap();
+    node1_handler
+        .join()
+        .expect("Failed to join with Node 1")
+        .unwrap();
     println!("END");
     Ok(())
 }
