@@ -114,7 +114,7 @@ fn main() -> Result<(), SendError<ThreadAction>> {
             listener_nodes: vec![NODE2_ADDRESS.to_owned(), NODE3_ADDRESS.to_owned()],
         })
     });
-    thread::sleep(Duration::from_secs(5));
+    thread::sleep(Duration::from_secs(50));
     println!("Times out, sending kill signals to threads");
     n1_tx.send(ThreadAction::STOP)?;
     n2_tx.send(ThreadAction::STOP)?;
