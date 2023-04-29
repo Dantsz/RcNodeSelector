@@ -26,7 +26,7 @@ struct ChildNode {
 
 fn listener_node_routine(data: ChildNode) -> std::io::Result<()> {
     let socket = UdpSocket::bind(&data.ip_adress)?;
-    let timeout = Duration::from_secs(5);
+    let timeout = Duration::from_millis(500);
     socket.set_read_timeout(Some(timeout))?;
     const USIZE_SIZE: usize = size_of::<usize>();
     let mut buf = vec![0; USIZE_SIZE];
@@ -65,7 +65,7 @@ struct MasterNodeData {
 }
 fn master_node_routine(data: MasterNodeData) -> std::io::Result<()> {
     let socket = UdpSocket::bind(&data.ip_adress)?;
-    let timeout = Duration::from_secs(5);
+    let timeout = Duration::from_millis(500);
     let mut buf = vec![0; 3];
     socket.set_read_timeout(Some(timeout))?;
     for i in 0usize..100usize {
@@ -123,21 +123,9 @@ fn main() -> Result<(), SendError<ThreadAction>> {
     });
     thread::sleep(Duration::from_secs(5));
     println!("Times out, sending kill signals to threads");
-    n1_tx.send(ThreadAction::STOP)?;
     n2_tx.send(ThreadAction::STOP)?;
     n3_tx.send(ThreadAction::STOP)?;
-    node2_handler
-        .join()
-        .expect("Failed to join with Node 2")
-        .unwrap();
-    node3_handler
-        .join()
-        .expect("Failed to join with Node 3")
-        .unwrap();
-    node1_handler
-        .join()
-        .expect("Failed to join with Node 1")
-        .unwrap();
+    n1_tx.send(ThreadAction::STOP)?;
     println!("END");
     Ok(())
 }
