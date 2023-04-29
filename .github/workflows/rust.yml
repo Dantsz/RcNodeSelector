@@ -19,7 +19,7 @@ jobs:
     - name: Build
       run: cargo build --verbose
     - name: Run
-      run: cargo run > output.txt
+      run: cargo run --verbose > output.txt
     - uses: actions/upload-artifact@v3
       with:
         name: RcNodeSelectorOutput
