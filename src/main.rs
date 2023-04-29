@@ -84,9 +84,9 @@ fn master_node_routine(data: MasterNodeData) -> std::io::Result<()> {
     Ok(())
 }
 fn main() -> Result<(), SendError<ThreadAction>> {
-    const NODE1_ADDRESS: &str = "127.0.0.4:1001";
-    const NODE2_ADDRESS: &str = "127.0.0.2:1001";
-    const NODE3_ADDRESS: &str = "127.0.0.3:1001";
+    const NODE1_ADDRESS: &str = "127.0.0.4:1111";
+    const NODE2_ADDRESS: &str = "127.0.0.2:1111";
+    const NODE3_ADDRESS: &str = "127.0.0.3:1111";
 
     println!("Creating channels");
     let (n1_tx, n1_rx) = unbounded::<ThreadAction>();
@@ -114,7 +114,7 @@ fn main() -> Result<(), SendError<ThreadAction>> {
             listener_nodes: vec![NODE2_ADDRESS.to_owned(), NODE3_ADDRESS.to_owned()],
         })
     });
-    thread::sleep(Duration::from_secs(50));
+    thread::sleep(Duration::from_secs(5));
     println!("Times out, sending kill signals to threads");
     n1_tx.send(ThreadAction::STOP)?;
     n2_tx.send(ThreadAction::STOP)?;
