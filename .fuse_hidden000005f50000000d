@@ -1,0 +1,313 @@
+Creating channels
+Starting listener threads
+Starting master node
+127.0.0.2:1111 : Received 0 from 127.0.0.4:1111
+127.0.0.2:1111 Found 0 which is divisible by 3 , sending ACK  to master
+127.0.0.3:1111 : Received 0 from 127.0.0.4:1111
+127.0.0.3:1111 Found 0 which is divisible by 5 , sending ACK  to master
+127.0.0.2:1111 : Received 1 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 2 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 3 from 127.0.0.4:1111
+127.0.0.2:1111 Found 3 which is divisible by 3 , sending ACK  to master
+127.0.0.3:1111 : Received 1 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 2 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 3 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 4 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 5 from 127.0.0.4:1111
+127.0.0.3:1111 Found 5 which is divisible by 5 , sending ACK  to master
+127.0.0.2:1111 : Received 4 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 5 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 6 from 127.0.0.4:1111
+127.0.0.2:1111 Found 6 which is divisible by 3 , sending ACK  to master
+127.0.0.3:1111 : Received 6 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 7 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 8 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 9 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 10 from 127.0.0.4:1111
+127.0.0.3:1111 Found 10 which is divisible by 5 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.2:1111 : Received 7 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 11 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.2:1111 : Received 8 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 9 from 127.0.0.4:1111
+127.0.0.2:1111 Found 9 which is divisible by 3 , sending ACK  to master
+127.0.0.3:1111 : Received 12 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.2:1111 : Received 10 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 13 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 14 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 15 from 127.0.0.4:1111
+127.0.0.3:1111 Found 15 which is divisible by 5 , sending ACK  to master
+127.0.0.2:1111 : Received 11 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.3:1111 : Received 16 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 12 from 127.0.0.4:1111
+127.0.0.2:1111 Found 12 which is divisible by 3 , sending ACK  to master
+127.0.0.3:1111 : Received 17 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.2:1111 : Received 13 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 18 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 19 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 14 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 15 from 127.0.0.4:1111
+127.0.0.2:1111 Found 15 which is divisible by 3 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.3:1111 : Received 20 from 127.0.0.4:1111
+127.0.0.3:1111 Found 20 which is divisible by 5 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.2:1111 : Received 16 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 21 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 22 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 23 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 24 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 17 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 18 from 127.0.0.4:1111
+127.0.0.2:1111 Found 18 which is divisible by 3 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.3:1111 : Received 25 from 127.0.0.4:1111
+127.0.0.3:1111 Found 25 which is divisible by 5 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.2:1111 : Received 19 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 20 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 21 from 127.0.0.4:1111
+127.0.0.2:1111 Found 21 which is divisible by 3 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.3:1111 : Received 26 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 22 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 23 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 24 from 127.0.0.4:1111
+127.0.0.2:1111 Found 24 which is divisible by 3 , sending ACK  to master
+127.0.0.3:1111 : Received 27 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.2:1111 : Received 25 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 26 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 27 from 127.0.0.4:1111
+127.0.0.2:1111 Found 27 which is divisible by 3 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.3:1111 : Received 28 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 28 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 29 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 30 from 127.0.0.4:1111
+127.0.0.2:1111 Found 30 which is divisible by 3 , sending ACK  to master
+127.0.0.3:1111 : Received 29 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 30 from 127.0.0.4:1111
+127.0.0.3:1111 Found 30 which is divisible by 5 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.3:1111 : Received 31 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 32 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 33 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 34 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 35 from 127.0.0.4:1111
+127.0.0.3:1111 Found 35 which is divisible by 5 , sending ACK  to master
+127.0.0.2:1111 : Received 31 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 36 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 37 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 32 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 33 from 127.0.0.4:1111
+127.0.0.2:1111 Found 33 which is divisible by 3 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.3:1111 : Received 38 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 34 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 35 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 36 from 127.0.0.4:1111
+127.0.0.2:1111 Found 36 which is divisible by 3 , sending ACK  to master
+127.0.0.3:1111 : Received 39 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 40 from 127.0.0.4:1111
+127.0.0.3:1111 Found 40 which is divisible by 5 , sending ACK  to master
+127.0.0.3:1111 : Received 41 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 42 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 43 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 44 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 45 from 127.0.0.4:1111
+127.0.0.3:1111 Found 45 which is divisible by 5 , sending ACK  to master
+127.0.0.3:1111 : Received 46 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 47 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 48 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 49 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 50 from 127.0.0.4:1111
+127.0.0.3:1111 Found 50 which is divisible by 5 , sending ACK  to master
+127.0.0.3:1111 : Received 51 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 52 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 53 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 54 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 55 from 127.0.0.4:1111
+127.0.0.3:1111 Found 55 which is divisible by 5 , sending ACK  to master
+127.0.0.3:1111 : Received 56 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 57 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 58 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 59 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 60 from 127.0.0.4:1111
+127.0.0.3:1111 Found 60 which is divisible by 5 , sending ACK  to master
+127.0.0.3:1111 : Received 61 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 62 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 63 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 64 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 65 from 127.0.0.4:1111
+127.0.0.3:1111 Found 65 which is divisible by 5 , sending ACK  to master
+127.0.0.3:1111 : Received 66 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 67 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 68 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 69 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 70 from 127.0.0.4:1111
+127.0.0.3:1111 Found 70 which is divisible by 5 , sending ACK  to master
+127.0.0.3:1111 : Received 71 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 72 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 73 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 74 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 75 from 127.0.0.4:1111
+127.0.0.3:1111 Found 75 which is divisible by 5 , sending ACK  to master
+127.0.0.2:1111 : Received 37 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 38 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 39 from 127.0.0.4:1111
+127.0.0.2:1111 Found 39 which is divisible by 3 , sending ACK  to master
+127.0.0.2:1111 : Received 40 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 41 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 42 from 127.0.0.4:1111
+127.0.0.2:1111 Found 42 which is divisible by 3 , sending ACK  to master
+127.0.0.2:1111 : Received 43 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 44 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 45 from 127.0.0.4:1111
+127.0.0.2:1111 Found 45 which is divisible by 3 , sending ACK  to master
+127.0.0.2:1111 : Received 46 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 47 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 48 from 127.0.0.4:1111
+127.0.0.2:1111 Found 48 which is divisible by 3 , sending ACK  to master
+127.0.0.2:1111 : Received 49 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 50 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 51 from 127.0.0.4:1111
+127.0.0.2:1111 Found 51 which is divisible by 3 , sending ACK  to master
+127.0.0.3:1111 : Received 76 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 77 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 78 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 79 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 80 from 127.0.0.4:1111
+127.0.0.3:1111 Found 80 which is divisible by 5 , sending ACK  to master
+127.0.0.3:1111 : Received 81 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 52 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 53 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 54 from 127.0.0.4:1111
+127.0.0.2:1111 Found 54 which is divisible by 3 , sending ACK  to master
+127.0.0.2:1111 : Received 55 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 56 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 57 from 127.0.0.4:1111
+127.0.0.2:1111 Found 57 which is divisible by 3 , sending ACK  to master
+127.0.0.2:1111 : Received 58 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 59 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 60 from 127.0.0.4:1111
+127.0.0.2:1111 Found 60 which is divisible by 3 , sending ACK  to master
+127.0.0.2:1111 : Received 61 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 62 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 63 from 127.0.0.4:1111
+127.0.0.2:1111 Found 63 which is divisible by 3 , sending ACK  to master
+127.0.0.2:1111 : Received 64 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 65 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 66 from 127.0.0.4:1111
+127.0.0.2:1111 Found 66 which is divisible by 3 , sending ACK  to master
+127.0.0.2:1111 : Received 67 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 68 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 69 from 127.0.0.4:1111
+127.0.0.2:1111 Found 69 which is divisible by 3 , sending ACK  to master
+127.0.0.2:1111 : Received 70 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 71 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 72 from 127.0.0.4:1111
+127.0.0.2:1111 Found 72 which is divisible by 3 , sending ACK  to master
+127.0.0.2:1111 : Received 73 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 74 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 75 from 127.0.0.4:1111
+127.0.0.2:1111 Found 75 which is divisible by 3 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.3:1111 : Received 82 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 83 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 84 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 85 from 127.0.0.4:1111
+127.0.0.3:1111 Found 85 which is divisible by 5 , sending ACK  to master
+127.0.0.3:1111 : Received 86 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 87 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 88 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 89 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 90 from 127.0.0.4:1111
+127.0.0.3:1111 Found 90 which is divisible by 5 , sending ACK  to master
+127.0.0.3:1111 : Received 91 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 92 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 93 from 127.0.0.4:1111
+127.0.0.3:1111 : Received 94 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 76 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.3:1111 : Received 95 from 127.0.0.4:1111
+127.0.0.3:1111 Found 95 which is divisible by 5 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.3:1111 : Received 96 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 77 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 78 from 127.0.0.4:1111
+127.0.0.2:1111 Found 78 which is divisible by 3 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.3:1111 : Received 97 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 79 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.3:1111 : Received 98 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 80 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.3:1111 : Received 99 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 81 from 127.0.0.4:1111
+127.0.0.2:1111 Found 81 which is divisible by 3 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.2:1111 : Received 82 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.2:1111 : Received 83 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.2:1111 : Received 84 from 127.0.0.4:1111
+127.0.0.2:1111 Found 84 which is divisible by 3 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.2:1111 : Received 85 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.2:1111 : Received 86 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 87 from 127.0.0.4:1111
+127.0.0.2:1111 Found 87 which is divisible by 3 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.2:1111 : Received 88 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.2:1111 : Received 89 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 90 from 127.0.0.4:1111
+127.0.0.2:1111 Found 90 which is divisible by 3 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.2:1111 : Received 91 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.2:1111 : Received 92 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 93 from 127.0.0.4:1111
+127.0.0.2:1111 Found 93 which is divisible by 3 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.2:1111 : Received 94 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 95 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.3:1111
+127.0.0.2:1111 : Received 96 from 127.0.0.4:1111
+127.0.0.2:1111 Found 96 which is divisible by 3 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.2:1111 : Received 97 from 127.0.0.4:1111
+127.0.0.2:1111 : Received 98 from 127.0.0.4:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.2:1111 : Received 99 from 127.0.0.4:1111
+127.0.0.2:1111 Found 99 which is divisible by 3 , sending ACK  to master
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+127.0.0.4:1111 : Received ACK from 127.0.0.2:1111
+Times out, sending kill signals to threads
+END
