@@ -129,7 +129,7 @@ fn main() -> Result<(), SendError<ThreadAction>> {
         }
         .listen()
     });
-    thread::sleep(Duration::from_secs(5));
+    thread::sleep(Duration::from_secs(10));
     println!("Times out, sending kill signals to threads");
     n2_tx.send(ThreadAction::STOP)?;
     n3_tx.send(ThreadAction::STOP)?;
