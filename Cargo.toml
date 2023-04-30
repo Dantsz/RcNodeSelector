@@ -1,5 +1,5 @@
 [package]
-name = "RcNodeSelector"
+name = "rc_node_selector"
 version = "0.1.0"
 edition = "2021"
 
